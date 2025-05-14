@@ -1,0 +1,8 @@
+# autostart uwsm on tty1
+if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
+  systemctl --user start uwsm.service
+fi
+
+# Created by `pipx` on 2025-05-12 08:04:19
+export PATH="$PATH:/home/minkaizen/.local/bin"
+export EDITOR=nvim
